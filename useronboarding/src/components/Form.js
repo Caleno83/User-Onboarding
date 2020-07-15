@@ -54,7 +54,9 @@ export default function Form({users, setUsers}) {
             .then(res => {
                 console.log("form submitted success", res)
                 //I set setUser here so it can retrieve the user data to the DOM
-                setUsers(res.data);
+                //setUsers(res.data);
+                //this one is to add all the user datas
+                setUsers([...users, [formState]]);
             })
             .catch(err => {
                 console.log("This is the Error", err)
