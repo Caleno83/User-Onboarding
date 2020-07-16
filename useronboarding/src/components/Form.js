@@ -106,8 +106,9 @@ export default function Form({users, setUsers}) {
 
     
     return (
-      
-        <form onSubmit={formSubmit}>
+        <div className="form">
+            <form onSubmit={formSubmit}>
+                <h1>User Onboarding</h1>
             <label htmlFor="name">
                 Name
                 <input
@@ -151,6 +152,6 @@ export default function Form({users, setUsers}) {
             <button disabled={buttonDisabled}>SUBMIT</button>
             <pre>{JSON.stringify(users, null, 2)}</pre>
         </form>
-    
+        </div>
     )
 }

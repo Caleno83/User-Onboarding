@@ -10,11 +10,8 @@ const [users, setUsers] = useState([]);
   
   return (
     <div className="app">
-      <h1>User Onboarding</h1>
-      <div className="form">
       <Form users={users} setUsers={setUsers}/>
       </div>
-    </div>
   );
 }
 

@@ -9,18 +9,27 @@ body {
     font-size: 62.5%;
   }
 
+  h1 {
+    padding: 5px 0 10px 0;
+  }
+
   .app {
     text-align: center;
-    padding: 60px 0 0 0;
+    padding: 60px 0 20px 0;
+    background-image: url("./img/background.jpg");
+    height: 600px;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    margin: 0 auto;
-    padding-top: 20px;
-    /* border: 2px solid black; */
+    width: 340px;
+    margin: -40px auto;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    height: auto;
   }
 
   label {
@@ -32,13 +41,13 @@ body {
   }
 
   input {
-    width: 100%;
+    width: 300px;
     margin: 5px 0 0 0;
     border: 2px solid gray;
     border-radius: 6px;
     padding: 10px;
-    font-size: 1.7rem;
-    text-align: center;
+    font-size: 2.1rem;
+    
   }
 
   .error {
@@ -51,7 +60,7 @@ body {
     background-color: black;
     color: white;
     font-size: 1.2rem;
-    margin: 20px 0 0 80px;
+    margin: 20px 0 0 100px;
     padding: 8px 11px;
     cursor: pointer;
     border: 2px black solid;
@@ -66,8 +75,8 @@ body {
   }
 
   .terms {
-  display: inline-block;
-  margin-left: -120px;
+    display: inline-block;
+    margin-left: -160px;
   }
 
   .terms input {
