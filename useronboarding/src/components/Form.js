@@ -49,14 +49,25 @@ export default function Form({users, setUsers}) {
         e.preventDefault();
         //I added axios data here so it does not fire a lot when its outside
         console.log("Form Submitted");
+        // to reset form 
+        setFormState({...errors});
+        // console.log(formState.name)
+        // console.log(formState.email);
+        // console.log(formState.password);
         axios
             .post("https://reqres.in/api/users", formState)
             .then(res => {
                 console.log("form submitted success", res)
                 //I set setUser here so it can retrieve the user data to the DOM
-                //setUsers(res.data);
-                //this one is to add all the user datas
-                setUsers([...users, [formState]]);
+                setUsers(res.data);
+                //this one is to add all the user 
+                // setUsers([...users, formState]);
+                console.log("success", users)
+                setFormState({
+                    name: "",
+                    email:"",
+                    password: ""                
+                })
             })
             .catch(err => {
                 console.log("This is the Error", err)
@@ -88,12 +99,12 @@ export default function Form({users, setUsers}) {
 
     // Wether or not our validation was successful, we will still set the state to the new value as the user is typing
         setFormState({
-            ...formState,
-            [e.target.name]: valueCheck
+             ...formState,
+         [e.target.name]: valueCheck
         });
     };
 
-
+    
     return (
       
         <form onSubmit={formSubmit}>
@@ -137,7 +148,7 @@ export default function Form({users, setUsers}) {
                 <input name="terms" type="checkbox" onChange={handleChange}/>
                 Terms of Service
             </label>
-            <button disabled={buttonDisabled}>Submit</button>
+            <button disabled={buttonDisabled}>SUBMIT</button>
             <pre>{JSON.stringify(users, null, 2)}</pre>
         </form>
     
