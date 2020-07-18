@@ -66,7 +66,8 @@ export default function Form({users, setUsers}) {
                 setFormState({
                     name: "",
                     email:"",
-                    password: ""                
+                    password: "",
+                    terms:""               
                 })
             })
             .catch(err => {
