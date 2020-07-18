@@ -147,7 +147,7 @@ export default function Form({users, setUsers}) {
                 {errors.password.length !== 0 && <p className="error">{errors.password}</p>}
             </label>
             <label className="terms" htmlFor="terms">
-                <input name="terms" type="checkbox" onChange={handleChange}/>
+                <input data-cy="terms" name="terms" type="checkbox" onChange={handleChange}/>
                 Terms of Service
             </label>
             <button disabled={buttonDisabled}>SUBMIT</button>
